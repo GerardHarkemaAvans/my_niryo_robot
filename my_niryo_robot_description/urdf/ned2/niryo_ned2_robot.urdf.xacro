@@ -16,9 +16,9 @@
 
     Refer to 'inc/ur_macro.xacro' for more information.
   -->
-    <xacro:include filename="$(find my_niryo_robot_description)/urdf/ned/niryo_ned2.transmission.xacro"/>
+    <xacro:include filename="$(find my_niryo_robot_description)/urdf/ned2/niryo_ned2.transmission.xacro"/>
 
-  <xacro:include filename="$(find my_niryo_robot_description)/urdf/ned/niryo_ned2.urdf.xacro"/>
+  <xacro:include filename="$(find my_niryo_robot_description)/urdf/ned2/niryo_ned2.urdf.xacro"/>
   <xacro:niryo_ned2/>
 
   <material name="LightGrey">

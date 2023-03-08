@@ -4,7 +4,7 @@
     <arg name="joints_gui" default="true"/>
 
 
-    <param name="robot_description" command="$(find xacro)/xacro $(find my_niryo_robot_description)/urdf/ned/niryo_$(arg hardware_version)_robot.urdf.xacro"/>
+    <param name="robot_description" command="$(find xacro)/xacro $(find my_niryo_robot_description)/urdf/$(arg hardware_version)/niryo_$(arg hardware_version)_robot.urdf.xacro"/>
 
     <param name="use_gui" value="$(arg joints_gui)"/>
 
