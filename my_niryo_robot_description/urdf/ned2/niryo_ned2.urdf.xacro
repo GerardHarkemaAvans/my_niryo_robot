@@ -196,13 +196,13 @@
 
 
     <!-- Joints -->
-
+<!--
     <joint name="joint_world" type="fixed">
         <parent link="world"/>
         <child link="base_link"/>
         <origin xyz="0 0 0" rpy="0 0 0"/>
     </joint>
-
+-->
     <joint name="joint_1" type="revolute">
         <origin xyz="0 0 0.1013" rpy="0 0 ${-PI/2}"/>
         <parent link="base_link"/>
