@@ -1,18 +1,14 @@
 <?xml version="1.0" ?>
 <launch xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="https://gist.githubusercontent.com/nalt/dfa2abc9d2e3ae4feb82ca5608090387/raw/roslaunch.xsd">
-  <!-- Arguments -->
-  <arg name="reset" default="false"/>
+<!-- Re-launch the MoveIt! Setup Assistant with this configuration package already loaded -->
 
-  <!-- If not specified, we'll use a default database location -->
-  <arg name="moveit_warehouse_database_path" default="$(find my_niryo_ned_moveit_config)/default_warehouse_mongo_db" />
+    <arg name="hardware_version" default="ned"/>
 
-  <!-- Launch the warehouse with the configured database location -->
-  <include file="$(find my_niryo_ned_moveit_config)/launch/warehouse.launch">
-    <arg name="moveit_warehouse_database_path" value="$(arg moveit_warehouse_database_path)" />
-  </include>
-
-  <!-- If we want to reset the database, run this node -->
-  <node if="$(arg reset)" name="$(anon moveit_default_db_reset)" type="moveit_init_demo_warehouse" pkg="moveit_ros_warehouse" respawn="false" output="screen" />
+	<arg name="setup_path" default="$(eval find( 'my_niryo_'+arg('hardware_version')+'_moveit_config'))" />
+    <include file="$(arg setup_path)/launch/default_warehouse_db.launch">
+    
+    
+    </include>
 
 </launch>

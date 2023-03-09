@@ -5,7 +5,10 @@
 
     <arg name="hardware_version" default="ned"/>
 
-    <include file="$(find my_niryo_$(arg hardware_version)_moveit_config)/launch/setup_assistant.launch">
+	<arg name="setup_path" default="$(eval find( 'my_niryo_'+arg('hardware_version')+'_moveit_config'))" />
+    <include file="$(arg setup_path)/launch/setup_assistant.launch">
+    
+    
     </include>
 
 </launch>
