@@ -10,6 +10,6 @@
   <param name="max_range" type="double" value="5.0" />
 
   <!-- Load the robot specific sensor manager; this sets the moveit_sensor_manager ROS parameter -->
-  <include file="$(find my_niryo_ned_moveit_config)/launch/niryo_moveit_sensor_manager.launch.xml" />
+  <include file="$(find my_niryo_ned2_moveit_config)/launch/niryo_moveit_sensor_manager.launch.xml" />
   
 </launch>

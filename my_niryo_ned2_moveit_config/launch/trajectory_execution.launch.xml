@@ -16,7 +16,7 @@
   <param name="trajectory_execution/allowed_start_tolerance" value="0.0"/> <!-- default 0.01 -->
   
   <!-- Load the robot specific controller manager; this sets the moveit_controller_manager ROS parameter -->
-  <include file="$(find my_niryo_ned_moveit_config)/launch/niryo_moveit_controller_manager.launch.xml" >
+  <include file="$(find my_niryo_ned2_moveit_config)/launch/niryo_moveit_controller_manager.launch.xml" >
       <arg name="hardware_version" value="$(arg hardware_version)" />
   </include>
 </launch>

@@ -8,5 +8,5 @@
         if no argument is passed, moveit_simple_controller_manager will be set -->
     <param name="moveit_controller_manager" value="$(arg moveit_controller_manager)" />
 
-    <rosparam file="$(find my_niryo_ned_moveit_config)/config/ros_controllers.yaml" />
+    <rosparam file="$(find my_niryo_ned2_moveit_config)/config/ros_controllers.yaml" />
 </launch>
