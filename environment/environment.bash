@@ -20,14 +20,14 @@ do
     case $opt in
         "With fysical Niryo Ned Robot(Hotspot mode)")
             echo "you chose With fysical Niryo Ned Robot(Hotspot mode)"
-            if [ "$NIRYO" != 'Ned' ]; then
+            if [ "$NIRYO" = 'Ned' ]; then
                 cat $HOME/niryo_ned_support/environment/avans_banner_ned.txt
                 source $HOME/catkin_ws/install/release/ned/setup.bash
                 source $HOME/niryo_ned_support/environment/hotspot_network.bash
                 source $HOME/niryo_robot_ws/devel/setup.bash
                 sudo service niryo_robot_ros stop
                 roslaunch my_niryo_robot_bringup niryo_ned_robot.launch
-            if [ "$NIRYO" != 'Ned2' ]; then
+            elif [ "$NIRYO" = 'Ned2' ]; then
                 cat $HOME/niryo_ned_support/environment/avans_banner_ned2.txt
                 source $HOME/catkin_ws/install/release/ned2/setup.bash
                 source $HOME/niryo_ned_support/environment/hotspot_network.bash
@@ -42,14 +42,14 @@ do
             ;;
         "With fysical Niryo Ned Robot(Wifi mode)")
             echo "you chose With fysical Niryo Ned Robot(Wifi mode)"
-            if [ "$NIRYO" != 'Ned' ]; then
+            if [ "$NIRYO" = 'Ned' ]; then
                 cat $HOME/niryo_ned_support/environment/avans_banner_ned.txt
                 source $HOME/catkin_ws/install/release/ned/setup.bash
                 source $HOME/niryo_ned_support/environment/wifi_network.bash
                 source $HOME/niryo_robot_ws/devel/setup.bash
                 sudo service niryo_robot_ros stop
                 roslaunch my_niryo_robot_bringup niryo_ned_robot.launch
-            if [ "$NIRYO" != 'Ned2' ]; then
+            elif [ "$NIRYO" = 'Ned2' ]; then
                 cat $HOME/niryo_ned_support/environment/avans_banner_ned2.txt
                 source $HOME/catkin_ws/install/release/ned2/setup.bash
                 source $HOME/niryo_ned_support/environment/wifi_network.bash
@@ -64,14 +64,14 @@ do
             ;;
         "With fysical Niryo Ned Robot(Ethernet mode)")
             echo "you chose With fysical Niryo Ned Robot(Ethernet mode)"
-            if [ "$NIRYO" != 'Ned' ]; then
+            if [ "$NIRYO" = 'Ned' ]; then
                 cat $HOME/niryo_ned_support/environment/avans_banner_ned.txt
                 source $HOME/catkin_ws/install/release/ned/setup.bash
                 source $HOME/niryo_ned_support/environment/ethernet_network.bash
                 source $HOME/niryo_robot_ws/devel/setup.bash
                 sudo service niryo_robot_ros stop
                 roslaunch my_niryo_robot_bringup niryo_ned_robot.launch
-            if [ "$NIRYO" != 'Ned2' ]; then
+            elif [ "$NIRYO" = 'Ned2' ]; then
                 cat $HOME/niryo_ned_support/environment/avans_banner_ned2.txt
                 source $HOME/catkin_ws/install/release/ned2/setup.bash
                 source $HOME/niryo_ned_support/environment/ethernet_network.bash
