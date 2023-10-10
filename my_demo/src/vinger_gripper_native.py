@@ -11,6 +11,9 @@ from tools_interface.srv import ToolCommand
 from std_msgs.msg import Int32
 
 
+
+!!!!!! Not tested yet
+
 class gripper:
 
     def __init__(self):
@@ -19,9 +22,9 @@ class gripper:
 	rospy.logout(namespace)
         #namespace = rospy.get_param("~namespace_topics")
 	#rospy.logout(namespace)
-        #self.__service_open_gripper = rospy.ServiceProxy(namespace + 'open_gripper', ToolCommand)
+        self.__service_open_gripper = rospy.ServiceProxy(namespace + 'open_gripper', ToolCommand)
                                                          
-        #self.__service_close_gripper = rospy.ServiceProxy(namespace + 'close_gripper',ToolCommand)
+        self.__service_close_gripper = rospy.ServiceProxy(namespace + 'close_gripper',ToolCommand)
        
 	# Tool
         self.current_tool_id = None
@@ -114,4 +117,4 @@ rospy.sleep(10)
 rospy.logout("ready")
 
 
-#grijper.open(speed=500, max_torque_percentage=100, hold_torque_percentage=20)
+grijper.open(speed=500, max_torque_percentage=100, hold_torque_percentage=20)

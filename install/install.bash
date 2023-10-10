@@ -2,4 +2,13 @@
 
 sudo apt install sshpass
 
-git submodule update --init ned_ros
+#!/bin/bash
+
+
+
+#cd $HOME/niryo_robot_ws/src
+cd ../..
+git  clone https://github.com/NiryoRobotics/ned_ros.git
+#cd $HOME/niryo_robot_ws/
+cd ..
+catkin b
